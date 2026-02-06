@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مشروعي الثالث - موسوعة HTML</title>
+  <meta name="description" content="مشروع شامل يجمع كل وسوم HTML">
+  <meta name="keywords" content="HTML, Tags, Attributes, Web Development">
+</head>
+<body>
+
+  <h1>مرحباً بكم في موسوعة HTML 👋</h1>
+  <p>هذا المشروع يجمع أهم الوسوم والخصائص في لغة HTML في صفحة واحدة.</p>
+
+  <!-- النصوص -->
+  <h2>النصوص</h2>
+  <h1>عنوان رئيسي H1</h1>
+  <h2>عنوان فرعي H2</h2>
+  <p><b>نص غامق</b> - <i>نص مائل</i> - <u>نص تحته خط</u> - <mark>نص مميز</mark></p>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <ol>
+    <li>الخطوة الأولى</li>
+    <li>الخطوة الثانية</li>
+  </ol>
+
+  <!-- الوسائط -->
+  <h2>الوسائط</h2>
+  <img src="https://i.ibb.co/HTqpHkqd/FB-IMG-1725011343132.jpg" alt="Ahmed Ali" width="150" height="150">
+  <video width="320" height="240" controls>
+    <source src="video.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    متصفحك لا يدعم الصوت.
+  </audio>
+
+  <!-- الروابط -->
+  <h2>الروابط</h2>
+  <a href="https://www.google.com">اذهب إلى جوجل</a><br>
+  <a href="https://www.w3schools.com" target="_blank" title="موقع تعليمي">اذهب إلى W3Schools</a><br>
+  <a href="#section1">اذهب إلى القسم الأول</a><br>
+  <a href="mailto:example@mail.com">راسلني عبر البريد الإلكتروني</a><br>
+  <a href="document.pdf" download>تحميل ملف PDF</a>
+
+  <h3 id="section1">القسم الأول</h3>
+  <p>هذا هو القسم الأول.</p>
+
+  <!-- الجداول -->
+  <h2>الجداول</h2>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>اليوم</th>
+      <th>الموضوع</th>
+      <th>المدة</th>
+    </tr>
+    <tr>
+      <td>السبت</td>
+      <td>HTML</td>
+      <td>3 ساعات</td>
+    </tr>
+    <tr>
+      <td>الأحد</td>
+      <td>CSS</td>
+      <td>2 ساعات</td>
+    </tr>
+  </table>
+
+  <h3>جدول باستخدام colspan</h3>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th colspan="2">معلومات الطالب</th>
+    </tr>
+    <tr>
+      <td>الاسم</td>
+      <td>أحمد علي</td>
+    </tr>
+  </table>
+
+  <h3>جدول باستخدام rowspan</h3>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>اليوم</th>
+      <th>المادة</th>
+      <th>المدة</th>
+    </tr>
+    <tr>
+      <td rowspan="2">الجمعة</td>
+      <td>JavaScript</td>
+      <td>3 ساعات</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>2 ساعات</td>
+    </tr>
+  </table>
+
+  <!-- النماذج -->
+  <h2>النماذج</h2>
+  <form>
+    <label for="name">الاسم:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">البريد الإلكتروني:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">كلمة المرور:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label for="age">العمر:</label><br>
+    <input type="number" id="age" name="age"><br><br>
+
+    <label for="birthdate">تاريخ الميلاد:</label><br>
+    <input type="date" id="birthdate" name="birthdate"><br><br>
+
+    <label for="file">رفع ملف:</label><br>
+    <input type="file" id="file" name="file"><br><br>
+
+    <label>الجنس:</label><br>
+    <input type="radio" name="gender" value="ذكر"> ذكر
+    <input type="radio" name="gender" value="أنثى"> أنثى<br><br>
+
+    <label>اهتماماتك:</label><br>
+    <input type="checkbox" name="interest" value="برمجة"> برمجة
+    <input type="checkbox" name="interest" value="زراعة"> زراعة
+    <input type="checkbox" name="interest" value="رياضة"> رياضة<br><br>
+
+    <label for="country">الدولة:</label><br>
+    <select id="country" name="country">
+      <option value="egypt">مصر</option>
+      <option value="ksa">السعودية</option>
+      <option value="uae">الإمارات</option>
+    </select><br><br>
+
+    <label for="message">رسالتك:</label><br>
+    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+    <button type="submit">إرسال</button>
+    <input type="reset" value="إعادة تعيين">
+  </form>
+
+  <!-- وسوم إضافية -->
+  <h2>وسوم إضافية</h2>
+  <iframe src="https://www.example.com" width="400" height="200" title="مثال"></iframe><br><br>
+
+  <details>
+    <summary>اضغط هنا لعرض التفاصيل</summary>
+    <p>هذه تفاصيل إضافية تظهر عند الضغط.</p>
+  </details><br>
+
+  <p>نسبة إنجاز المشروع:</p>
+  <progress value="70" max="100"></progress><br>
+
+  <p>مستوى البطارية:</p>
+  <meter value="0.6">60%</meter>
+
+</body>
+</html>
