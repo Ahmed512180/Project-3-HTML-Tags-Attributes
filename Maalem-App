@@ -1,0 +1,172 @@
+/***********************************************************
+ * منصة مَعْلَم: كود الهيكل المتكامل (الأكاديمي، المهني، الديني)
+ * التقنيات: React.js, React Router, CSS3, JavaScript Logic
+ ***********************************************************/
+
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// --- 1. قاعدة بيانات تجريبية (Mock Database) ---
+const mockStudent = {
+  name: "أحمد محمد",
+  university: "جامعة القاهرة",
+  academicScore: 85,
+  professionalScore: 70,
+  spiritualScore: 90,
+  role: "Student",
+  badges: ["مبرمج واعد", "حافظ أجزاء", "مهندس مستقبلي"]
+};
+
+// --- 2. محرك التنبيهات والذكاء الاصطناعي (AI Logic) ---
+const getSmartNotification = (stats) => {
+  if (stats.academicScore > 80 && stats.spiritualScore < 50) {
+    return "ما شاء الله على اجتهادك الأكاديمي! ما رأيك بـ 5 دقائق مع وردك القرآني لترتاح روحك؟ ✨";
+  }
+  if (stats.professionalScore >= 70) {
+    return "أنت الآن تمتلك مهارة مهنية قوية! هل نرسل ملفك لشركات التوظيف الشريكة؟ 🚀";
+  }
+  return "مرحباً بك في مَعْلَم.. رحلة العلم والعمل والقيم تبدأ من هنا.";
+};
+
+// --- 3. مكون عداد تدريجي (CountUp Component) ---
+function CountUp({ target }) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 1000;
+    const stepTime = Math.abs(Math.floor(duration / target));
+    const timer = setInterval(() => {
+      start += 1;
+      setValue(start);
+      if (start >= target) clearInterval(timer);
+    }, stepTime);
+    return () => clearInterval(timer);
+  }, [target]);
+
+  return <span>{value}%</span>;
+}
+
+// --- 4. صفحات الأجنحة ---
+function AcademicPage() {
+  return (
+    <div style={styles.pageContainer}>
+      <h2>📚 مرحباً بك في الجناح الأكاديمي - هنا تجد المحاضرات والدروس الجامعية.</h2>
+      <Link to="/" style={styles.backBtn}>⬅️ رجوع للصفحة الرئيسية</Link>
+    </div>
+  );
+}
+
+function ProfessionalPage() {
+  return (
+    <div style={styles.pageContainer}>
+      <h2>💼 مرحباً بك في الجناح المهني - هنا تجد مشاريع البرمجة والمهارات العملية.</h2>
+      <Link to="/" style={styles.backBtn}>⬅️ رجوع للصفحة الرئيسية</Link>
+    </div>
+  );
+}
+
+function SpiritualPage() {
+  return (
+    <div style={styles.pageContainer}>
+      <h2>🕌 مرحباً بك في الجناح الديني - هنا تجد القرآن والسنة والدروس الأخلاقية.</h2>
+      <Link to="/" style={styles.backBtn}>⬅️ رجوع للصفحة الرئيسية</Link>
+    </div>
+  );
+}
+
+// --- 5. المكون الرئيسي للمنصة (Home Component) ---
+function Home({ student, notification }) {
+  return (
+    <div style={styles.container}>
+      <header style={styles.header}>
+        <h1>مَعْلَم <span style={{fontSize: '0.5em'}}>Ma'lam</span></h1>
+        <p>عِلم، عمل، وقيم</p>
+      </header>
+
+      <div style={styles.notificationBar}>
+        <strong>🔔 تنبيه ذكي:</strong> {notification}
+      </div>
+
+      <div style={styles.wingsGrid}>
+        <div style={{...styles.wingCard, borderColor: '#1a237e'}}>
+          <h2 style={{color: '#1a237e'}}>🏛️ الجناح الأكاديمي</h2>
+          <p>كليات الطب، الهندسة، والحقوق..</p>
+          <Link to="/academic" style={styles.btnAcademic}>دخول المحاضرات</Link>
+        </div>
+
+        <div style={{...styles.wingCard, borderColor: '#2e7d32'}}>
+          <h2 style={{color: '#2e7d32'}}>💼 الجناح المهني</h2>
+          <p>البرمجة، الذكاء الاصطناعي، والجرافيك..</p>
+          <Link to="/professional" style={styles.btnProfessional}>طبق مهاراتك</Link>
+        </div>
+
+        <div style={{...styles.wingCard, borderColor: '#c6a700'}}>
+          <h2 style={{color: '#c6a700'}}>🕌 الجناح الديني</h2>
+          <p>القرآن، السنة، والقيم الأخلاقية..</p>
+          <Link to="/spiritual" style={styles.btnSpiritual}>بناء الروح</Link>
+        </div>
+      </div>
+
+      <section style={styles.profileSection}>
+        <h3>الملف الشخصي الموحد (Student Identity)</h3>
+        <div style={styles.statsContainer}>
+          <div style={styles.statBox}>
+            🎓 أكاديمي:
+            <progress style={styles.progressAcademic} value={student.academicScore} max="100"></progress>
+            <CountUp target={student.academicScore} />
+          </div>
+          <div style={styles.statBox}>
+            🛠️ مهني:
+            <progress style={styles.progressProfessional} value={student.professionalScore} max="100"></progress>
+            <CountUp target={student.professionalScore} />
+          </div>
+          <div style={styles.statBox}>
+            ✨ قيمي:
+            <progress style={styles.progressSpiritual} value={student.spiritualScore} max="100"></progress>
+            <CountUp target={student.spiritualScore} />
+          </div>
+        </div>
+        <div style={styles.badgeContainer}>
+          {student.badges.map(b => <span key={b} style={styles.badge}>● {b}</span>)}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// --- 6. تطبيق المنصة مع Routing ---
+export default function MaalamPlatform() {
+  const [student] = useState(mockStudent);
+  const [notification, setNotification] = useState("");
+
+  useEffect(() => {
+    const msg = getSmartNotification(student);
+    setNotification(msg);
+  }, [student]);
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home student={student} notification={notification} />} />
+        <Route path="/academic" element={<AcademicPage />} />
+        <Route path="/professional" element={<ProfessionalPage />} />
+        <Route path="/spiritual" element={<SpiritualPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+// --- 7. التنسيقات (Styling) ---
+const styles = {
+  container: { direction: 'rtl', fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f4f7f6' },
+  header: { textAlign: 'center', marginBottom: '30px', borderBottom: '2px solid #ddd', paddingBottom: '10px' },
+  notificationBar: { backgroundColor: '#fff3cd', padding: '15px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #ffeeba' },
+  wingsGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' },
+  wingCard: { backgroundColor: '#fff', padding: '20px', borderRadius: '12px', borderTop: '8px solid', textAlign: 'center', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' },
+  profileSection: { marginTop: '40px', padding: '20px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' },
+  statsContainer: { display: 'flex', justifyContent: 'space-around', margin: '20px 0' },
+  statBox: { padding: '10px 20px', borderRadius: '20px', backgroundColor: '#eee', fontWeight: 'bold', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' },
+  badgeContainer: { display: 'flex', gap: '10px', justifyContent: 'center' },
+  badge: { backgroundColor: '#e3f2fd', padding: '5px 15px', borderRadius: '15px', fontSize: '0.8em', color: '#1976d2' },
+  btnAcademic: { backgroundColor: '#1a237e', color: '#fff', padding: '10px 20px', borderRadius: '5px', text
