@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مشروع التخرح</title>
+  <meta name="description" content="all tags and all Attributes in html5">
+  <meta name="keywords" content="HTML, Tags, Attributes, Web Development">
+</head>
+<body>
+  <h1>مرحباً بكم في مشروع تخرج html5 </h1>
+  <p>هذا المشروع يجمع أهم الوسوم والخصائص  في صفحة واحدة.</p>
+  <h1>مبرمج المستقبل</h1>
+  <h2>Fall Stack Web Development</h2>
+  <p>
+    <b>أطمح إلي نجاح مبهر في عالم البرمجة</b>
+    <br>
+    <i>أطمح إلي نجاح مبهر في الجامعة</i>
+    <br>
+    <u>عايز اتجوز يا بابا</u>
+    <br>
+    <mark>Yes l Can</mark>
+    </p>
+  <ul>
+    <li>html5</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <ol>
+    <li>BMW</li>
+    <li>مرسيدس</li>
+    <li>فيراري</li>
+    <li>لامبورجيني</li>
+  </ol>
+  <h2>الوسائط</h2>
+  <img src="https://i.ibb.co/HTqpHkqd/FB-IMG-1725011343132.jpg" alt="Ahmed Ali" width="150" height="150">
+  
+  <audio controls loop="">
+    <source src="https://res.cloudinary.com/dyyfnl8pm/video/upload/v1770486561/AUD-20240916-WA0002_kkugph.mp3" type="audio/mpeg">
+  </audio>
+  
+  <video loop="" width="100%" height="500" controls>
+    <source src="https://res.cloudinary.com/dyyfnl8pm/video/upload/v1770485829/6bdbac6eb27208c3c1b94929c5b289dd_ekk3e8.mp4"type="video/mp4"
+  </video>
+  
+  <mark>الروابط</mark>
+  <br>
+  <a href="https://www.google.com"target="_blank"title>اذهب إلى جوجل</a><br>
+  <a href="https://www.w3schools.com" target="_blank" title="موقع تعليمي">اذهب إلى W3Schools</a><br>
+  <a href="#section1">اذهب إلى القسم الأول</a><br>
+  <mark>تواصل معي عبر:-</mark>
+  <br>
+  <a href="mailto:14ahmed.ali.32.s@gmail.com">عبر البريد الإلكتروني</a><br>
+  <a href="tel to :01029139745">رقم الهاتف</a><br>
+  <a href="https://www.facebook.com/share/1Hnu9173cg/">فيسبوك</a><br>
+  <a href="https://x.com/AhmedAli1771124">تويتر</a><br>
+  <a href="https://www.linkedin.com/in/ahmed-ali-960241326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">لينكدإن</a><br>
+  <a href="https://www.instagram.com/ahmed_ali_albyomy?igsh=MTE4ZTNzZnRiYW9vbg==">إنستجرام</a><br>
+  <a href="https://www.tiktok.com/@ahmedali44360?_r=1&_t=ZS-93ZUTShSfK8">تيكتوك</a><br>
+  <a href="document.pdf"download>تحميل ملف</a>
+  <h3 id="section1">القسم الأول</h3>
+  <p>هذا هو القسم الأول.</p>
+  <h2><mark>جدول مذاكرتي</mark></h2>
+  <table border="1" cellpadding="10">
+    <thead bg color="blue">
+    <tr>
+      <th>اليوم</th>
+      <th>الموضوع</th>
+      <th>المدة</th>
+    </tr>
+    <tr>
+      </thead>
+      <td>السبت</td>
+      <td>HTML5</td>
+      <td>٥ ساعات</td>
+    </tr>
+    <tr>
+      <td>الثلاثاء</td>
+      <td>CSS</td>
+      <td>٥ ساعات</td>
+    </tr>
+    <tr>
+      <td>الجمعة</td>
+      <td>JavaScript</td>
+      <td>٥ ساعات</td>
+    </tr>
+  </table>
+
+  <h3>colspan</h3>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th colspan="2">معلومات الطالب</th>
+    </tr>
+    <tr>
+      <td>الاسم</td>
+      <td>أحمد علي</td>
+    </tr>
+    <tr>
+      <td>العمر</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>الديانة</td>
+      <td>مسلم</td>
+    </tr>
+  </table>
+  <h3>rowspan</h3>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>اليوم</th>
+      <th>المادة</th>
+      <th>المدة</th>
+    </tr>
+    <tr>
+      <td rowspan="2">الجمعة</td>
+      <td>https</td>
+      <td>٥ ساعات </td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>٥ ساعات</td>
+    </tr>
+  </table>
+  <h2>إستمارة تسجيل بيانات</h2>
+  <form>
+    <label for="name">الاسم:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">البريد الإلكتروني:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">كلمة المرور:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label for="phone">رقم التليفون</label><br>
+    <input type="phone"id="phone"number="phone"><br><br>
+    <label for="age">العمر:</label><br>
+    <input type="number" id="age" name="age"><br><br>
+
+    <label for="birthdate">تاريخ الميلاد:</label><br>
+    <input type="date" id="birthdate" name="birthdate"><br><br>
+
+    <label>الجنس:</label><br>
+    <input type="radio" name="gender" value="ذكر"> ذكر
+    <input type="radio" name="gender" value="أنثى"> أنثى<br><br>
+
+    <label>اهتماماتك:</label><br>
+    <input type="checkbox" name="interest" value="برمجة"> برمجة
+    <input type="checkbox" name="interest" value="زراعة"> زراعة
+    <input type="checkbox" name="interest" value="رياضة"> رياضة<br><br>
+
+    <label for="country">الدولة:</label><br>
+    <select id="country" name="country">
+      <option value="egypt">مصر</option>
+      <option value="ksa">السعودية</option>
+      <option value="uae">الإمارات</option>
+    </select><br><br>
+    
+    <label for="file">رفع ملف:</label><br>
+    <input type="file" id="file" name="file"><br><br>
+
+    <label for="message">رسالتك:</label><br>
+    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+    <button type="submit">إرسال</button>
+    <input type="reset" value="إعادة تعيين">
+  </form>
+
+  <h2>وسوم إضافية</h2>
+  <iframe src="https://www.example.com" width="400" height="200" title="مثال"></iframe><br><br>
+
+  <details>
+    <summary>اضغط هنا لعرض التفاصيل</summary>
+    <p>هذه تفاصيل إضافية تظهر عند الضغط.</p>
+  </details><br>
+
+  <p>نسبة إنجاز المشروع:</p>
+  <progress value="100" max="100"></progress><br>
+
+  <p>مستوى البطارية:</p>
+  <meter value="0.6">95%</meter>
+
+</body>
+</html>
